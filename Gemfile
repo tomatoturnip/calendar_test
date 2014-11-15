@@ -27,6 +27,7 @@ gem 'fullcalendar_engine'
 gem 'spring',        group: :development
 gem 'quiet_assets', group: :development
 gem 'pry', group: :development
+gem 'rails_12factor', group: :production
 
 # gem 'bootstrap-sass', '~> 3.3.1'
 # gem 'autoprefixer-rails'
