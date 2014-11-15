@@ -29,8 +29,9 @@ gem 'quiet_assets', group: :development
 gem 'pry', group: :development
 gem 'rails_12factor', group: :production
 
-# gem 'bootstrap-sass', '~> 3.3.1'
-# gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
+gem 'font-awesome-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
