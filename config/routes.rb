@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # Route to fullcalendar engine
   mount FullcalendarEngine::Engine => "/calendar"
 
-  resources :sermons, only: [:index, :new, :create, :destroy]
+  resources :sermons
 
   # Route to root page
   root 'welcome#index'

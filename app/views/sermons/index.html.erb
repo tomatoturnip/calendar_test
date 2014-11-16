@@ -1,0 +1,24 @@
+<h1>Messages</h1>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Speaker</th>
+      <th>Topic</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <% if @sermons.present? %>
+  <tbody>
+    <% sermons.each do |sermon| %>
+      <tr>
+        <td><%= sermon.name %></td>
+        <td><%= sermon.subject %></td>
+        <td><%= sermon.date %></td>
+        <td><%= button_to "Edit", edit_sermon %></td>
+        <td><%= button_to "Delete", sermon, method: :delete, class: "btn btn-danger", confirm: "Are you sure you want to delete this message?" %></td>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to "Add a message", new_sermon_path, class: "btn btn-success" %>

@@ -34,7 +34,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'high_voltage'
-gem 'simple_form'
+gem 'simple_form', '~> 3.1.0.rc1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

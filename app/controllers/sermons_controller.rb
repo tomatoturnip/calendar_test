@@ -3,6 +3,10 @@ class SermonsController < ApplicationController
     @sermons = Sermon.all
   end
 
+  def edit
+    @sermon = Sermon.find(params[:id])
+  end
+
   def new
     @sermon = Sermon.new
   end
