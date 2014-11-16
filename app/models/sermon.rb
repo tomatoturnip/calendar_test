@@ -4,4 +4,5 @@ class Sermon < ActiveRecord::Base
   validates :day, presence: true
 
   mount_uploader :avatar, AvatarUploader
+
 end

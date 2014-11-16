@@ -1,1 +1,30 @@
+<form role="form">
+  <%= simple_form_for @sermon, html: { multipart: true } do |f| %>
+  <div class="form-group">
+    <label class="control-label">Name</label>
+    <input type="text" class="form-control" placeholder="Name of speaker">
+    <%= f.input :name %>
+  </div>
 
+  <div class="form-group">
+    <label class="control-label">Topic</label>
+    <input type="text" class="form-control" placeholder="Topic">
+    <%= f.input :subject %>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label">Date</label>
+    <input type="date" class="form-control">
+    <%= f.input :day %>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="exampleInputFile">File</label>
+    <input type="file" id="exampleInputFile">
+    <%= f.file_format :avatar %>
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+
+  <button type="submit" class="btn btn-default">Add message</button>
+  <% end %>
+</form>
