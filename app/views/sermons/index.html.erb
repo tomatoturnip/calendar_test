@@ -14,7 +14,7 @@
       <tr>
         <td><%= sermon.name %></td>
         <td><%= sermon.subject %></td>
-        <td><%= sermon.date %></td>
+        <td><%= sermon.day %></td>
         <td><%= button_to "Edit", edit_sermon %></td>
         <td><%= button_to "Delete", sermon, method: :delete, class: "btn btn-danger", confirm: "Are you sure you want to delete this message?" %></td>
     <% end %>
