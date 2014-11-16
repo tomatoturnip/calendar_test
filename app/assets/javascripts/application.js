@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require fullcalendar_engine/application
 //= require bootstrap-sprockets
+//= require grayscale
