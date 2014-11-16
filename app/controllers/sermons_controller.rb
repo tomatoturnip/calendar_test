@@ -29,7 +29,7 @@ class SermonsController < ApplicationController
 
   private
     def sermon_params
-      params.require(:sermon).permit(:name, :subject, :day, :avatar)
+      params.require(:sermon).permit(:speaker, :subject, :day, :avatar)
     end
 end
 
