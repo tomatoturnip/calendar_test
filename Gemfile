@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 gem 'quiet_assets', group: :development
 gem 'pry', group: :development
 gem 'rails_12factor', group: :production
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', group: :development
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
