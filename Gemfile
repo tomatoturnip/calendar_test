@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 gem 'quiet_assets', group: :development
 gem 'pry', group: :development
 gem 'rails_12factor', group: :production
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
@@ -36,6 +37,7 @@ gem 'carrierwave'
 gem 'high_voltage'
 gem 'simple_form', '~> 3.1.0.rc1'
 gem 'fog'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
