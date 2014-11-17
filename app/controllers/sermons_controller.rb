@@ -7,6 +7,16 @@ class SermonsController < ApplicationController
     @sermon = Sermon.find(params[:id])
   end
 
+  def update
+    @sermon = Sermon.find(params[:id])
+
+    if @sermon.update(sermon_params)
+      redirect_to @sermon
+    else
+      render "edit"
+    end
+  end
+
   def new
     @sermon = Sermon.new
   end
