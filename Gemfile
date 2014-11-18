@@ -38,6 +38,7 @@ gem 'high_voltage'
 gem 'simple_form', '~> 3.1.0.rc1'
 gem 'fog'
 gem 'newrelic_rpm'
+gem 'aws-sdk'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
