@@ -1,43 +1,49 @@
 class SermonsController < ApplicationController
+  before_action :set_sermon, only: [:edit, :update, :destroy]
+
   def index
     @sermons = Sermon.all
-  end
-
-  def edit
-    @sermon = Sermon.find(params[:id])
-  end
-
-  def update
-    @sermon = Sermon.find(params[:id])
-
-    if @sermon.update(sermon_params)
-      redirect_to @sermon
-    else
-      render "edit"
-    end
   end
 
   def new
     @sermon = Sermon.new
   end
 
+  def edit
+  end
+
   def create
     @sermon = Sermon.new(sermon_params)
 
-    if @sermon.save
-      redirect_to sermons_path, notice: "The sermon has been uploaded."
+    respond_to do |format|
+      if @sermon.save
+        format.html { redirect_to sermons_path, notice: "The sermon has been uploaded." }
+        format.json { render json: @sermon, status: 201, location: @sermon }
+      else
+        format.html { render :new }
+        format.json { render json: @sermon.errors, status: 422 }
+      end
+    end
+  end
+
+  def update
+    if @sermon.update(sermon_params)
+      redirect_to sermons_path, notice: "Sermon was successfully updated."
     else
-      render "new"
+      render :edit
     end
   end
 
   def destroy
-    @sermon = Sermon.find(params[:id])
     @sermon.destroy
     redirect_to sermons_path, notice: "The sermon has been deleted."
   end
 
   private
+    def set_sermon
+      @sermon = Sermon.find(params[:id])
+    end
+
     def sermon_params
       params.require(:sermon).permit(:speaker, :subject, :day, :avatar)
     end
