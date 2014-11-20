@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Sermon, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it "should have a speaker" do
+    sermon = Sermon.new
+    expect(sermon.speaker).to eq("Jones")
+  end
 end
