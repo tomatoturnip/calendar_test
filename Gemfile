@@ -11,7 +11,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'fullcalendar_engine'
 
 group :development do
-  gem 'spring',
+  gem 'spring'
   gem 'quiet_assets'
   gem 'pry'
   gem 'dotenv-rails'
@@ -34,3 +34,4 @@ gem 'simple_form', '~> 3.1.0.rc1'
 gem 'fog'
 gem 'newrelic_rpm'
 gem 'jquery-ui-rails'
+A
