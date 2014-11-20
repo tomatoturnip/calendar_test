@@ -36,7 +36,13 @@ class SermonsController < ApplicationController
 
   def destroy
     @sermon.destroy
-    redirect_to sermons_path, notice: "The sermon has been deleted."
+    # redirect_to sermons_path, notice: "The sermon has been deleted."
+
+    respond_to do |format|
+      format.html { redirect_to sermons_path }
+      format.json { head :ok }
+      format.js { render layout: false }
+    end
   end
 
   private

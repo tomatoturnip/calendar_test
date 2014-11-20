@@ -11,14 +11,15 @@
   <% if @sermons.present? %>
   <tbody>
     <% @sermons.each do |sermon| %>
-      <tr>
+      <tr id="sermon_<%=sermon.id.to_s %>" >
         <td><%= sermon.speaker %></td>
         <td><%= sermon.subject %></td>
         <td><%= sermon.day %></td>
         <td><%= audio_tag sermon.avatar.url, controls: true, autobuffer: true %></td>
         <td><%= link_to "Download", sermon.avatar.url %></td>
         <td><%= button_to "Edit", edit_sermon_path(sermon), class: "btn btn-success", method: :get %></td>
-        <td><%= button_to "Delete", sermon, method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure you want to delete this message?" } %></td>
+        <td><%= link_to "Delete", sermon, method: :delete, remote: true, class: "btn btn-danger", data: { confirm: "Are you sure you want to delete this message?" } %></td>
+      </tr>
     <% end %>
   <% end %>
   </tbody>

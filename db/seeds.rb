@@ -1,7 +1,19 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# clear main tables
+["sermons"].each do |table|
+  ActiveRecord::Base.connection.execute("TRUNCATE #{table}")
+  ActiveRecord::Base.connection.execute("ALTER SEQUENCE #{table}_id_seq RESTART WITH 1")
+end
+
+# Sermons
+puts "Seeding sermons..."
+Sermon.create(speaker: "foo", subject: "bar", day: "2014-11-19", avatar: nil)
+Sermon.create(speaker: "foo1", subject: "bar1", day: "2014-11-19", avatar: nil)
+Sermon.create(speaker: "foo2", subject: "bar2", day: "2014-11-21", avatar: nil)
+Sermon.create(speaker: "foo3", subject: "bar3", day: "2014-11-22", avatar: nil)
+Sermon.create(speaker: "foo4", subject: "bar4", day: "2014-11-23", avatar: nil)
+Sermon.create(speaker: "foo5", subject: "bar5", day: "2014-11-24", avatar: nil)
+Sermon.create(speaker: "foo6", subject: "bar6", day: "2014-11-25", avatar: nil)
+Sermon.create(speaker: "foo7", subject: "bar7", day: "2014-11-26", avatar: nil)
+Sermon.create(speaker: "foo8", subject: "bar8", day: "2014-11-27", avatar: nil)
+
+puts "Done seeding."
