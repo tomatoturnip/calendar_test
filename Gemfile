@@ -34,4 +34,4 @@ gem 'simple_form', '~> 3.1.0.rc1'
 gem 'fog'
 gem 'newrelic_rpm'
 gem 'jquery-ui-rails'
-A
+
