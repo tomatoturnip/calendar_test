@@ -2,7 +2,7 @@ class SermonsController < ApplicationController
   before_action :set_sermon, only: [:edit, :update, :destroy]
 
   def index
-    @sermons = Sermon.all.page(params[:page]).per(5)
+    @sermons = Sermon.recent.page(params[:page]).per(5)
   end
 
   def new

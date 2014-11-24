@@ -5,4 +5,5 @@ class Sermon < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
+  scope :recent, -> { order(day: :desc) }
 end
