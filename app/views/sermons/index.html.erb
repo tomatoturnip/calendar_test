@@ -1,11 +1,12 @@
 <h1>Messages</h1>
 
-<table class="table">
+<table class="table table-bordered table-striped datatable">
   <thead>
     <tr>
       <th>Speaker</th>
       <th>Topic</th>
       <th>Date</th>
+      <th>Listen</th>
     </tr>
   </thead>
   <% if @sermons.present? %>
@@ -23,3 +24,4 @@
 <br />
 <br />
 <%= link_to "Back", root_path, class: "btn btn-default btn-sm" %>
+

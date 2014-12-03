@@ -1,2 +1,3 @@
 $('#sermon').html('<%= j render(partial: 'sermon') %>');
 $('#paginator').html('<%= j (paginate(@sermons, remote: true).to_s)%>');
+
