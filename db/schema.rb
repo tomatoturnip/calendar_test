@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141116191859) do
+ActiveRecord::Schema.define(version: 20141208182854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20141116191859) do
     t.integer  "event_series_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "task"
+    t.string   "color"
   end
 
   add_index "fullcalendar_engine_events", ["event_series_id"], name: "index_fullcalendar_engine_events_on_event_series_id", using: :btree
