@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'fullcalendar_engine', git: 'git@github.com:tomatoturnip/fullcalendar-rails-engine.git'
+gem 'jquery-datatables-rails', '~> 3.1.1'
+
 
 group :development do
   gem 'spring'
