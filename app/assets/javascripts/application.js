@@ -18,3 +18,4 @@
 //= require datatables
 //= require fullcalendar_engine/application
 //= require bootstrap-sprockets
+//= require grayscale
