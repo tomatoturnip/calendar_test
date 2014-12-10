@@ -1,13 +1,21 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
+
+  namespace :admin do
+    root to: 'home#index'
+
+    resources :sermons, except: :show
+    mount FullcalendarEngine::Engine => "/calendar"
+  end
 
   devise_for :users
   # Route to fullcalendar engine
-  mount FullcalendarEngine::Engine => "/calendar"
 
+  mount FullcalendarEngine::Engine => "/calendar"
   resources :sermons, except: :show
 
-  # Route to root page
-  root 'welcome#index'
+
+
 
 
 
