@@ -2,7 +2,7 @@
   <tr id="sermon_<%=sermon.id.to_s %>" >
     <td><%= sermon.speaker %></td>
     <td><%= sermon.subject %></td>
-    <td><%= sermon.day %></td>
+    <td><%= sermon.day.strftime("%m/%d/%Y") %></td>
     <td><%= audio_tag sermon.avatar.url, controls: true, autobuffer: true %></td>
     <td><%= link_to "Download", sermon.avatar.url %></td>
     <td><%= button_to "Edit", edit_sermon_path(sermon), class: "btn btn-success", method: :get %></td>

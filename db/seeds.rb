@@ -1,5 +1,5 @@
 # clear main tables
-["sermons"].each do |table|
+["users", "sermons"].each do |table|
   ActiveRecord::Base.connection.execute("TRUNCATE #{table}")
   ActiveRecord::Base.connection.execute("ALTER SEQUENCE #{table}_id_seq RESTART WITH 1")
 end
@@ -15,5 +15,10 @@ Sermon.create(speaker: "foo5", subject: "bar5", day: "2014-11-24", avatar: nil)
 Sermon.create(speaker: "foo6", subject: "bar6", day: "2014-11-25", avatar: nil)
 Sermon.create(speaker: "foo7", subject: "bar7", day: "2014-11-26", avatar: nil)
 Sermon.create(speaker: "foo8", subject: "bar8", day: "2014-11-27", avatar: nil)
+
+# Users
+puts "Seeding users..."
+User.create(email: 'lydia@barbershoplabs.com', password: 'barbershop', password_confirmation: 'barbershop', role: 'admin', approved: true)
+User.create(email: 'ho9708@gmail.com', password: 'barbershop', password_confirmation: 'barbershop', role: 'admin', approved: true)
 
 puts "Done seeding."
