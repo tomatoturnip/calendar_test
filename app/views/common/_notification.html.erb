@@ -1,0 +1,10 @@
+<div id="notification">
+<%= flash.each do |name, msg| %>
+  <% unless msg == true %>
+    <div class="alert alert-"<%= name.to_s == 'notice' ? 'success' : 'danger' %>
+      <a class="close" data-dismiss="alert" href="#">x</a>
+      <%= msg %>
+    </div>
+  <% end %>
+<% end %>
+</div>
