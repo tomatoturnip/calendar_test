@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     if user.role == "admin"
       admin_root_path
     else
-      root_path
+      member_root_path
     end
   end
 
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   def set_layout
     if controller_path.starts_with?("admin/")
       "application"
-    elsif devise_controller?
+    elsif controller_path.starts_with?("member/")
       "member"
     else
       "landing_page"
