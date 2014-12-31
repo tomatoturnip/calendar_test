@@ -20,7 +20,5 @@
 //= require bootstrap-sprockets
 
 $(function() {
-  $('#notification').delay(500).fadeIn('normal', function(){
-    $(this).delay(2500).fadeOut();
-  });
+  $('#notification').delay(2500).fadeOut();
 });

@@ -19,3 +19,7 @@
 //= require fullcalendar_engine/application
 //= require bootstrap-sprockets
 //= require grayscale
+
+$(function() {
+  $('#notification').delay(2500).fadeOut();
+});
