@@ -1,4 +1,4 @@
-class SermonsController < ApplicationController
+class Member::SermonsController < ApplicationController
   before_action :authenticate_user!
 
   def index
