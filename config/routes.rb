@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   devise_for :users
 
   mount FullcalendarEngine::Engine => "/calendar"
-  #resources :sermons, except: :show
+
 end
