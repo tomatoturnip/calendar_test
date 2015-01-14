@@ -4,7 +4,12 @@
 /* CSS used here will be applied after bootstrap.css */
 
 body {
- background: image-url('autumn-forest.jpg') no-repeat center center fixed;
+ /* background: image-url('autumn-forest.jpg') no-repeat center center fixed; */
+ background-image: url('autumn-forest.jpg');
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-attachment: fixed;
+
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
