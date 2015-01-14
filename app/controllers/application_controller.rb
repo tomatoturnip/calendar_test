@@ -18,10 +18,12 @@ class ApplicationController < ActionController::Base
   end
 
   def set_layout
-    if controller_path.starts_with?("admin/")
-      "application"
-    elsif controller_path.starts_with?("member/")
+    if controller_path.starts_with?("member/")
       "member"
+    elsif controller_path.starts_with?("admin/")
+      "application"
+    elsif devise_controller?
+      "login"
     else
       "landing_page"
     end

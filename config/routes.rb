@@ -1,20 +1,16 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
-
   namespace :admin do
-    root to: 'home#index'
-
+    mount FullcalendarEngine::Engine => "/calendar"
     resources :sermons, except: :show
+    root to: 'home#index'
   end
 
   namespace :member do
-    root to: 'home#index'
-
+    mount FullcalendarEngine::Engine => "/calendar"
     resources :sermons, except: :show
+    root to: 'home#index'
   end
 
   devise_for :users
-
-  mount FullcalendarEngine::Engine => "/calendar"
-
+  root 'welcome#index'
 end
