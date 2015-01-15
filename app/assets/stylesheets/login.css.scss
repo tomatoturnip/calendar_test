@@ -1,14 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
 
 /* CSS used here will be applied after bootstrap.css */
 
 body {
- /* background: image-url('autumn-forest.jpg') no-repeat center center fixed; */
     background-image: url('autumn-forest.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
+
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -29,6 +31,7 @@ body {
 .form-inputs {
     text-align: center;
 }
+
 .form-actions {
     text-align: center;
 }

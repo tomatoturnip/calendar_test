@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'fullcalendar_engine', path: '../fullcalendar-rails-engine'
 gem 'jquery-datatables-rails', '~> 3.1.1'
 gem 'devise'
+gem 'therubyracer'
 
 group :development do
   gem 'spring'
