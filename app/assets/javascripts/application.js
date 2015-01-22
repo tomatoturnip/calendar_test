@@ -16,7 +16,7 @@
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require datatables
-//= require fullcalendar_engine/application
+// require fullcalendar_engine/application
 //= require bootstrap-sprockets
 
 $(function() {
