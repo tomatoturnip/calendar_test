@@ -40,7 +40,8 @@ end
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
-gem 'font-awesome-rails'
+# gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 4.2.0'
 gem 'carrierwave'
 gem 'high_voltage'
 gem 'simple_form', '~> 3.1.0.rc1'
