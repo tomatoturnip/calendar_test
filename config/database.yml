@@ -78,8 +78,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: calendar_test_production
+#   username: calendar_test
+#   password: <%= ENV['CALENDAR_TEST_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
   database: calendar_test_production
-  username: calendar_test
-  password: <%= ENV['CALENDAR_TEST_DATABASE_PASSWORD'] %>
+  username:
+  password:

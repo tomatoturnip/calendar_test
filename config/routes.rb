@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     root to: 'home#index'
   end
 
-  mount FullcalendarEngine::Engine => "/calendar"
+  # mount FullcalendarEngine::Engine => "/calendar"
   devise_for :users
   root 'welcome#index'
 end
