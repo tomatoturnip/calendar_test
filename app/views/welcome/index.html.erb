@@ -36,7 +36,14 @@
           <div class="col-lg-8 col-lg-offset-2">
               <h2>Messages</h2>
               <p>You can download or listen to messages.</p>
-              <%= @user.link_to_messages %>
+              <%#= @user.link_to_messages %>
+               <% if user_signed_in? && current_user.role == "admin" %>
+                    <li><%= link_to "Messages", admin_sermons_path %></li>
+                <% elsif user_signed_in? && current_user.role == "member" %>
+                    <li><%= link_to "Messages", member_sermons_path %></li>
+                <% else %>
+                    <li><%= link_to "Messages", new_user_session_path %></li>
+                <% end %>
           </div>
       </div>
   </div>
