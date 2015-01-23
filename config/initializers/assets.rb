@@ -5,7 +5,8 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-# Rails.application.config.assets.precompile += %w( landing_page.css landing_page.js search.js )
+# Rails.application.config.assets.precompile += %w( dataTables/sort_both.png dataTables/sort_asc.png )
+
 Rails.application.config.assets.precompile << Proc.new do |path|
   if path =~ /\.(css|js)\z/
     full_path = Rails.application.assets.resolve(path).to_path
