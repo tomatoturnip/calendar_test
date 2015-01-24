@@ -9,7 +9,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'fullcalendar_engine', git: 'git@github.com:tomatoturnip/fullcalendar-rails-engine.git'
+gem 'fullcalendar_engine', git: 'https://github.com/tomatoturnip/fullcalendar-rails-engine.git'
 # gem 'fullcalendar_engine', path: '../fullcalendar-rails-engine'
 gem 'jquery-datatables-rails', '~> 3.1.1'
 gem 'devise'

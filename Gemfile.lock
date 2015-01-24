@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:tomatoturnip/fullcalendar-rails-engine.git
+  remote: https://github.com/tomatoturnip/fullcalendar-rails-engine.git
   revision: 095289d01d1db17a1e2feec4e7b1ed2febaf2fe0
   specs:
     fullcalendar_engine (1.0.6)
