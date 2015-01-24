@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  after_create :send_admin_mail
+  # after_create :send_admin_mail
 
   ROLES = ["member", "admin"]
 
