@@ -17,7 +17,7 @@ class Admin::SermonsController < ApplicationController
 
     respond_to do |format|
       if @sermon.save
-        format.html { redirect_to sermons_path, notice: "The sermon has been uploaded." }
+        format.html { redirect_to admin_sermons_path, notice: "The sermon has been uploaded." }
         format.json { render json: @sermon, status: 201, location: @sermon }
       else
         format.html { render :new }
