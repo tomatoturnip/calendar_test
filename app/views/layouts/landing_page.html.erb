@@ -47,11 +47,11 @@
                     <li><%= link_to "Messages", new_user_session_path %></li>
                 <% end %>
 
-                <%# if user_signed_in? %>
-                    <!-- <li><%#= link_to "Calendar", fullcalendar_engine_path %></li> -->
-                <%# else %>
-                  <!-- <li><%#= link_to "Calendar", new_user_session_path %></li> -->
-                <%# end %>
+                <% if user_signed_in? %>
+                    <li><%= link_to "Calendar", fullcalendar_engine_path %></li>
+                <% else %>
+                  <li><%= link_to "Calendar", new_user_session_path %></li>
+                <% end %>
 
                 <% if user_signed_in? %>
                   <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>

@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:tomatoturnip/fullcalendar-rails-engine.git
+  revision: 095289d01d1db17a1e2feec4e7b1ed2febaf2fe0
+  specs:
+    fullcalendar_engine (1.0.6)
+      rails (>= 4.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -314,6 +321,7 @@ DEPENDENCIES
   factory_girl_rails
   fog
   font-awesome-sass (~> 4.2.0)
+  fullcalendar_engine!
   high_voltage
   jbuilder (~> 2.0)
   jquery-datatables-rails (~> 3.1.1)
