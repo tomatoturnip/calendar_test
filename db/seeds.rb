@@ -18,8 +18,6 @@ Sermon.create(speaker: "foo8", subject: "bar8", day: "2014-11-27", avatar: nil)
 
 # Users
 puts "Seeding users..."
-User.create(email: 'lydia@barbershoplabs.com', password: 'barbershop', password_confirmation: 'barbershop', role: 'admin', approved: true)
-User.create(email: 'ho9708@gmail.com', password: 'barbershop', password_confirmation: 'barbershop', role: 'admin', approved: true)
-User.create(email: 'testuser@test.com', password: 'barbershop', password_confirmation: 'barbershop', role: 'member', approved: true)
+User.create(email: ENV['ADMIN_EMAIL'], password: ENV['ADMIN_PASSWORD'], password_confirmation: ENV['ADMIN_PASSWORD'], role: 'admin', approved: true)
 
 puts "Done seeding."
