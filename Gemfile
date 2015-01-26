@@ -14,6 +14,7 @@ gem 'fullcalendar_engine', git: 'https://github.com/tomatoturnip/fullcalendar-ra
 gem 'jquery-datatables-rails', '~> 3.1.1'
 gem 'devise'
 gem 'therubyracer'
+gem 'unicorn'
 
 group :development do
   gem 'spring'
