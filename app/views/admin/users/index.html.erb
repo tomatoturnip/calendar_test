@@ -1,13 +1,47 @@
-<h1>Users</h1>
+<div class="row">
+  <div class="col-md-12">
+    <h1>Users</h1>
+  </div>
+</div>
 
 <%#= link_to "All Users", action: :index %>
 <%#= link_to "Users awaiting approval", action: :index, approved: "false" %>
+<div class="row">
+  <div class="col-md-10">
+    <% if @users.present? %>
+      <table class="table table-striped table-hover table-responsive">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Joined</th>
+            <th>Role</th>
+            <th>Approved</th>
+            <th></th>
+          </tr>
+        </thead>
+        </tbody>
+          <% @users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= time_ago_in_words(user.created_at) %> ago</td>
+            <td><%= user.role %></td>
+            <td><%= user.approved %></td>
+            <td><%= link_to "Edit", edit_admin_user_path(user) %> | <%= link_to "Delete", [:admin, user], data: { confirm: "Are you sure?" }, method: :delete %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-<table>
-  <% users.each do |user| %>
-    <tr>
-      <td><%= user.email %></td>
-      <td><%= user.approved %></td>
-      <td><%= link_to "Edit", edit_user_path(user) %></td>
-    </tr>
-</table>
+      <% else %>
+      <br/>
+      <p>No users have joined yet.</p>
+      <br/>
+    <% end %>
+  </div>
+  <div class="col-md-2">
+    <div class="pull-left">
+      <%= link_to "Add user", new_admin_user_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
