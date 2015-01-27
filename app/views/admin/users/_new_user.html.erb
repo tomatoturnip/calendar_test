@@ -1,0 +1,9 @@
+<%= simple_form_for [:admin, @user], html: { class: "form-vertical" } do |f| %>
+  <%= f.input :email, label: false, placeholder: 'email' %>
+  <%= f.input :password, label: false, placeholder: 'password' %>
+  <%= f.input :password_confirmation, label: false, placeholder: 'password confirmation' %>
+  <%= f.input :role, as: :select, collection: User::ROLES, label: false, placeholder: 'role', include_blank: false, default: 'member' %>
+  <%= f.input :approved, as: :select, label: false, placeholder: 'approved status', default: false %>
+
+  <%= f.button :submit, label: 'Create user', class: 'btn btn-primary' %>
+<% end %>

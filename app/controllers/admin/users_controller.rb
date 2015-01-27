@@ -10,7 +10,7 @@ class Admin::UsersController < ApplicationController
   end
 
   def new
-    User.new
+    @user = User.new
   end
 
   def create
