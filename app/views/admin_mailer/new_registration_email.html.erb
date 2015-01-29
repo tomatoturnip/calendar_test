@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>A user has signed up requesting PCIC membership.</h1>
+    <p>
+      The user is <%= @user.email %>.
+      <br>
+    </p>
+    <p>
+      To approve/reject this user, just follow this <a href=<%= @url %>>link.</a> and edit the member's approved status. If approved, an automated e-mail will be sent to that user notifying them that they are signed up.
+    </p>
+  </body>
+</html>

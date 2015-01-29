@@ -18,6 +18,7 @@
 //= require datatables
 //= require fullcalendar_engine/application
 //= require bootstrap-sprockets
+//= require underscore
 
 $(function() {
   $('#notification').delay(2500).fadeOut();

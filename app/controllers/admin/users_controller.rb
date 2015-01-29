@@ -37,6 +37,9 @@ class Admin::UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(user_params)
+
+        UserMailer.user_approved_email(@user).deliver if @user.approved?
+
         format.html { redirect_to admin_users_path, notice: "User updated." }
         format.json { render json: @user, status: :created, location: @user }
       else

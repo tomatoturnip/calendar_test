@@ -15,12 +15,14 @@ gem 'jquery-datatables-rails', '~> 3.1.1'
 gem 'devise'
 gem 'therubyracer'
 gem 'unicorn'
+gem 'underscore-rails'
 
 group :development do
   gem 'spring'
   gem 'quiet_assets'
   gem 'pry'
   gem 'dotenv-rails'
+  gem 'letter_opener'
 end
 
 group :development, :test do
