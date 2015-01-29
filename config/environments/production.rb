@@ -77,4 +77,13 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { :host => 'https://peninsulachurch.herokuapp.com' }
+
+  ActionMailer::Base.smtp_settings = {
+    :address                => "stmp.gmail.com",
+    :port                   => "587",
+    :domain                 => "gmail.com",
+    :user_name              => ENV["ADMIN_EMAIL"],
+    :password               => ENV["ADMIN_PASSWORD"],
+    :enable_starttls_auto   => true
+  }
 end
