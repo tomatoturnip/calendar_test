@@ -14,7 +14,6 @@ gem 'fullcalendar_engine', git: 'https://github.com/tomatoturnip/fullcalendar-ra
 gem 'jquery-datatables-rails', '~> 3.1.1'
 gem 'devise'
 gem 'therubyracer'
-gem 'unicorn'
 gem 'underscore-rails'
 
 group :development do
@@ -39,6 +38,7 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'unicorn'
 end
 
 gem 'bootstrap-sass', '~> 3.3.1'
