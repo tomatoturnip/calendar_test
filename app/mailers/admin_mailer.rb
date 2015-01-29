@@ -4,7 +4,7 @@ class AdminMailer < ActionMailer::Base
 
   def new_registration_email(user)
     @user = user
-    @url = "https://peninsulachurch.herokuapp.com/admin/users"
+
     mail(subject: "New user signup: #{@user.email}")
   end
 end
