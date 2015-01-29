@@ -82,9 +82,7 @@ Rails.application.configure do
     :address                => "stmp.mandrillapp.com",
     :port                   => "587",
     :user_name              => ENV["MANDRILL_USERNAME"],
-    :password               => ENV["MANDRILL_APIKEY"],
-    :domain                 => 'heroku.com',
-    :authentication         => :plain
+    :password               => ENV["MANDRILL_APIKEY"]
   }
   ActionMailer::Base.delivery_method = :smtp
 end
