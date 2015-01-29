@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        AdminMailer.new_user_sign_up_email(@user).deliver
+        UserMailer.new_user_sign_up_email(@user).deliver
 
         format.html { redirect_to root_path, notice: "Your membership is pending approval" }
         format.json { render json: @user, status: :created, location: @user }
