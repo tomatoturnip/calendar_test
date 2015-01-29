@@ -77,14 +77,11 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { :host => 'https://peninsulachurch.herokuapp.com' }
-  config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
-    :address                => "stmp.gmail.com",
+    :address                => "stmp.mandrillapp.com",
     :port                   => "587",
-    :domain                 => "gmail.com",
-    :authentication         => "plain",
-    :user_name              => ENV["ADMIN_EMAIL"],
-    :password               => ENV["ADMIN_PASSWORD"]
+    :user_name              => ENV["MANDRILL_USERNAME"],
+    :password               => ENV["MANDRILL_APIKEY"]
   }
 end
