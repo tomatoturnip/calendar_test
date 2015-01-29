@@ -53,7 +53,7 @@ class Admin::UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
 
-    resond_to do |format|
+    respond_to do |format|
       format.html { redirect_to admin_users_path, notice: "User deleted." }
     end
   end
