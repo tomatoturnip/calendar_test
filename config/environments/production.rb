@@ -79,7 +79,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'peninsulachurch.herokuapp.com' }
 
   ActionMailer::Base.smtp_settings = {
-    :address                => "stmp.mandrillapp.com",
+    :address                => "smtp.mandrillapp.com",
     :port                   => "587",
     :user_name              => ENV["MANDRILL_USERNAME"],
     :password               => ENV["MANDRILL_APIKEY"]
