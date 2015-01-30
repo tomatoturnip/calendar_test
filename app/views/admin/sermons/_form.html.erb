@@ -1,17 +1,13 @@
-<%= simple_form_for [:admin, @sermon], html: { multipart: true, class: 'form-horizontal' },
-  defaults: { label: false },
-  wrapper: :horizontal_form,
-  wrapper_mappings: {
-    check_boxes: :horizontal_radio_and_checkboxes,
-    radio_buttons: :horizontal_radio_and_checkboxes,
-    file: :horizontal_file_input,
-    boolean: :horizontal_boolean
-   } do |f| %>
-    <%= f.input :speaker, placeholder: 'Name of speaker' %>
-    <%= f.input :subject, placeholder: 'Topic' %>
+<%= simple_form_for [:admin, @sermon], html: { multipart: true, class: 'form-vertical' } do |f| %>
+    <%= f.input :speaker, placeholder: 'speaker name', label: false %>
+    <%= f.input :subject, placeholder: 'topic', label: false %>
     <%= f.input_field :day, as: :date %>
     <br>
     <%= f.file_field :avatar %>
     <br>
-    <%= f.button :submit, "Add message" %>
+
+    <div class="btn-toolbar">
+    <%= f.button :submit, label: 'Add message', class: 'btn btn-primary' %>
+    <%= link_to "Cancel", admin_sermons_path, class: 'btn btn-default' %>
+  </div>
 <% end %>
