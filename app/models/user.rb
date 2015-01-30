@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def approved
+    approved? ? "Yes" : "No"
+  end
+
   def active_for_authentication?
     super && approved?
   end
