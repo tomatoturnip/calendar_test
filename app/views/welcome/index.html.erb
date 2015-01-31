@@ -29,6 +29,35 @@
   </div>
 </section>
 
+<!-- Schedule Section -->
+<section id="schedule" class="container content-section text-center">
+  <div class="schedule-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="row" role="tabpanel">
+            <h2>Schedule</h2>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#sunday" aria-controls="sunday" role="tab" data-toggle="tab">Sunday</a></li>
+              <li role="presentation"><a href="#tuesday" aria-controls="tuesday" role="tab" data-toggle="tab">Tuesday</a></li>
+              <li role="presentation"><a href="#friday" aria-controls="friday" role="tab" data-toggle="tab">Friday</a></li>
+            </ul>
+
+             <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="sunday"><%= render 'sunday' %></div>
+              <div role="tabpanel" class="tab-pane" id="tuesday"><%= render 'tuesday' %></div>
+              <div role="tabpanel" class="tab-pane" id="friday"><%= render 'friday' %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Message Section -->
 <section id="messages" class="content-section text-center">
   <div class="message-section">
