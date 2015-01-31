@@ -22,3 +22,8 @@
 abbr[title="required"] {
   display: none;
 }
+
+#notification {
+  float: right;
+  z-index: 1;
+}

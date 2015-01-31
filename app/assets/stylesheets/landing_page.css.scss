@@ -19,3 +19,11 @@
 .panel {
   padding: 10px;
 }
+
+#notification {
+  position: absolute;
+  right: 0px;
+  float: right;
+  top: 90px;
+  z-index: 1;
+}
