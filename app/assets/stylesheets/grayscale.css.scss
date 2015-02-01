@@ -267,8 +267,9 @@ a:focus {
 .schedule-section {
     width: 100%;
     padding: 50px 0;
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    background: image-url('downloads-bg.jpg') no-repeat center center scroll;
+    background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -296,6 +297,8 @@ a:focus {
     }
 }
 
+.nav-tabs,
+.tab-content,
 .btn {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -305,12 +308,15 @@ a:focus {
     transition: all .3s ease-in-out;
 }
 
+.tab-content .table,
 .btn-default {
     border: 1px solid #219ab3;
     color: #219ab3;
     background-color: transparent;
 }
 
+.nav-tabs li a:focus,
+.nav-tabs li a:hover,
 .btn-default:hover,
 .btn-default:focus {
     border: 1px solid #219ab3;
