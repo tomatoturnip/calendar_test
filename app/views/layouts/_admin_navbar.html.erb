@@ -1,5 +1,5 @@
 <% if current_user.role == "admin" %>
-  <div class="navbar-collapse collapse">
+  <div class="custom-nav navbar-collapse collapse">
     <ul class="nav navbar-nav">
       <li><%= link_to 'Admin Dashboard', main_app.admin_root_path %></li>
       <li><%= link_to 'Messages', main_app.admin_sermons_path %></li>

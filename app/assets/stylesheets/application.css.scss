@@ -7,10 +7,12 @@
 @import "fullcalendar_engine/application";
 @import url('//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic');
 @import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
+@import "common";
 
 .navbar {
   border-radius: 0;
 }
+
 .alert a {
   text-decoration: none;
 }
