@@ -43,7 +43,6 @@
                 <li><a class="page-scroll" href="#contact">Contact</a></li>
 
                 <% if user_signed_in? %>
-                  <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
                   <li>
                     <% if current_user.role == "member" %>
                       <%= link_to "Dashboard", member_root_path %>
@@ -51,6 +50,7 @@
                       <%= link_to "Dashboard", admin_root_path %>
                     <% end %>
                   </li>
+                  <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
                 <% else %>
                   <li><%= link_to "Log in", new_user_session_path %></li>
                 <% end %>
