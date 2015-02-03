@@ -27,3 +27,37 @@
   top: 90px;
   z-index: 1;
 }
+
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+}
+
+.dropdown-menu li:hover {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-tabs .dropdown-menu, .dropdown-menu, .navbar .dropdown-menu {
+    margin-top: 0;
+}
+
+@media (min-width:769px) {
+  .dropdown:hover .dropdown-menu {
+  display: block;
+  }
+}
+
+.dropdown-menu li:hover {
+  background: #302f2f;
+}
+
+.dropdown-menu li.active .page-scroll {
+  color: #000;
+}
