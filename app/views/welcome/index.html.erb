@@ -26,8 +26,6 @@
           <h4>Cross – the Way to the Eternal Purpose of God</h4>
           <h4>Church - which is his body, the fulness of him who fills all in all: (Ephesians 1:23)</h4>
           <p>In the eternality past God purposed a purpose in His Beloved Son. God created all things, including men, for His Son. All the creation is to manifest the fullness and glory of Christ. Though man sinned and failed, God’s purpose does not fail.  In the fullness of time, God sent His only begotten Son to this world. Through His death on the cross, He opened a new and living way for men to reconcile to God.  By faith through grace we are called to be the Body of Christ to manifest the fullness of Christ.  By the work of Holy Spirit the Self life is put to death, the life of Christ is abound.</p>
-          <br/>
-          <p>Need <a href="#map" class="page-scroll">directions?</a></p>
       </div>
   </div>
 </section>
@@ -61,7 +59,7 @@
       <div class="container">
           <div class="col-lg-8 col-lg-offset-2">
               <h2>Messages</h2>
-              <p>You can download or listen to messages.</p>
+              <p>Log in to download or listen to messages.</p>
                <% if user_signed_in? && current_user.role == "admin" %>
                     <%= link_to "Messages", admin_sermons_path, class: "btn btn-default btn-lg" %>
                 <% elsif user_signed_in? && current_user.role == "member" %>
@@ -69,6 +67,9 @@
                 <% else %>
                     <%= link_to "Messages", new_user_session_path, class: "btn btn-default btn-lg" %>
                 <% end %>
+                <p></p>
+              <p><%= link_to "Sign up", new_user_registration_path %> for an account if you don't have one.
+              <br/>An account is created after you are approved by the administrator.</p>
           </div>
       </div>
   </div>
@@ -79,10 +80,10 @@
   <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
           <h2>Contact PCIC</h2>
-          <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+          <p>Feel free to email us for any questions/comments.</p>
           <p><a href="mailto:peninsulachurchinchrist@gmail.com">peninsulachurchinchrist@gmail.com</a>
           </p>
-          <ul class="list-inline banner-social-buttons">
+          <!-- <ul class="list-inline banner-social-buttons">
               <li>
                   <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
               </li>
@@ -92,7 +93,7 @@
               <li>
                   <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
               </li>
-          </ul>
+          </ul> -->
       </div>
   </div>
 </section>
