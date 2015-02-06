@@ -53,4 +53,5 @@ gem 'newrelic_rpm'
 gem 'jquery-ui-rails'
 gem 'kaminari'
 gem 'draper', '~> 1.3'
-
+gem 'dalli'
+gem 'memcachier'

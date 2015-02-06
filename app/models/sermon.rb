@@ -7,3 +7,5 @@ class Sermon < ActiveRecord::Base
 
   scope :recent, -> { order(day: :desc) }
 end
+
+
